@@ -1,0 +1,102 @@
+/* Ajustes básicos */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #343a40;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.sidebar.collapsed {
+    width: 0px; /* Cambiado a 80px en lugar de 0 para evitar que el menú desaparezca completamente */
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Links del sidebar */
+.sidebar .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    color: #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    color: #fff;
+}
+
+/* Contenido principal */
+.main-content {
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    margin-left: 250px;
+    padding-bottom: 60px; /* Para que el footer no lo tape */
+}
+
+.main-content.collapsed {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+/* Contenido específico */
+.container-content {
+    transition: transform 0.3s ease;
+    text-align: left;
+    min-height: 80vh;
+    margin-bottom: 40px; /* Espacio antes del footer */
+}
+
+/* Botón para colapsar el menú */
+.toggle-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+.toggle-menu:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del título principal */
+.creative-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Centrando el contenido cuando el sidebar está colapsado */
+.container-content.collapsed {
+    text-align: center;
+}
